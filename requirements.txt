@@ -1,0 +1,7 @@
+torch==2.4.0+cu124
+numpy<2
+polars
+tqdm
+matplotlib
+pillow
+--extra-index-url https://download.pytorch.org/whl/cu124
