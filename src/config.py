@@ -22,9 +22,9 @@ class Config:
     FUTURE_FRAMES = 10   
     
     # --- 模型参数 ---
-    D_MODEL = 128
-    NHEAD = 4
-    NUM_LAYERS = 2
+    D_MODEL = 256
+    NHEAD = 8
+    NUM_LAYERS = 4
     DROPOUT = 0.1
 
     # --- 训练参数 ---

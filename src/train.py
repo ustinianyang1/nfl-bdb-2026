@@ -13,6 +13,16 @@ from .utils import get_logger
 # 屏蔽 Flash Attention 警告 (因为 Windows 下通常不可用)
 warnings.filterwarnings("ignore", message=".*1Torch was not compiled with flash attention.*")
 
+class RMSELoss(nn.Module):
+    """RMSE Loss: sqrt(MSE)"""
+    def __init__(self):
+        super().__init__()
+        self.mse = nn.MSELoss()
+    
+    def forward(self, outputs, targets):
+        mse = self.mse(outputs, targets)
+        return torch.sqrt(mse)
+
 class EarlyStopping:
     """早停机制与最佳模型自动保存"""
     def __init__(self, patience=7, verbose=False, delta=0, path='checkpoint.pth', logger=None):
@@ -110,7 +120,7 @@ def main_train():
     
     model = TimeSeriesTransformer().to(Config.DEVICE)
 
-    criterion = nn.MSELoss()
+    criterion = RMSELoss()
     optimizer = optim.AdamW(model.parameters(), lr=Config.LEARNING_RATE, weight_decay=1e-4)
     
     # 学习率调度器

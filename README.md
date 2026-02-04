@@ -3,6 +3,7 @@
 本项目面向 NFL Big Data Bowl 2026 预测赛道，目标是利用 Next Gen Stats (NGS) 追踪数据预测球员的运动轨迹。系统基于时空 Transformer 架构，支持从数据加载、特征工程、模型训练到推理与可视化的完整流程。
 
 ## 项目结构
+
 nfl-bdb-2026/
 ├── README.md               # 项目文档
 ├── QUICKSTART.md           # 快速开始指南
@@ -38,6 +39,7 @@ nfl-bdb-2026/
     └── *.gif               # 动画
 
 ## 数据集表头
+
 game_id,
 play_id,
 player_to_predict,
