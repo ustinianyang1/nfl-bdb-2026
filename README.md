@@ -4,6 +4,7 @@
 
 ## 项目结构
 
+```
 nfl-bdb-2026/
 ├── README.md               # 项目文档
 ├── QUICKSTART.md           # 快速开始指南
@@ -37,9 +38,11 @@ nfl-bdb-2026/
 │   └── visualize.py        # 可视化工具
 └── visualize/              # 可视化结果
     └── *.gif               # 动画
+```
 
 ## 数据集表头
 
+```
 game_id,
 play_id,
 player_to_predict,
@@ -63,3 +66,4 @@ o,
 num_frames_output,
 ball_land_x,
 ball_land_y
+```
